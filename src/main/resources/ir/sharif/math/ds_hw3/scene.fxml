@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.math.ds_hw3.FXMLController">
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+        <center>
+            <Label fx:id="label" alignment="CENTER" prefHeight="56.0" prefWidth="178.0" text="welcome" textFill="#0be02b" BorderPane.alignment="CENTER" />
+        </center>
+        <right>
+            <Button fx:id="start" alignment="CENTER" mnemonicParsing="false" onAction="#start" prefHeight="88.0" prefWidth="126.0" text="start" textFill="#ba1414" BorderPane.alignment="CENTER" />
+        </right>
+      <top>
+         <BorderPane fx:id="upBorder" prefHeight="151.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <left>
+               <ChoiceBox fx:id="choice" prefHeight="30.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+               <TextField fx:id="enterV" alignment="CENTER" maxWidth="-Infinity" prefHeight="26.0" prefWidth="150.0" promptText="enter v &lt; 32" BorderPane.alignment="CENTER">
+                  <BorderPane.margin>
+                     <Insets />
+                  </BorderPane.margin>
+               </TextField>
+            </center>
+            <right>
+               <TextField fx:id="enterB" alignment="CENTER" prefHeight="26.0" prefWidth="150.0" promptText="enter b &lt; 8" BorderPane.alignment="CENTER_RIGHT" />
+            </right>
+            <bottom>
+                <SplitPane dividerPositions="0.5" prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <Button fx:id="src" layoutX="95.0" layoutY="7.0" mnemonicParsing="false" onAction="#chooseSrc" text="select source file" />
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <Button fx:id="dest" layoutX="97.0" layoutY="7.0" mnemonicParsing="false" onAction="#chooseDest" text="select output file" />
+                    </AnchorPane>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                </SplitPane>
+            </bottom>
+         </BorderPane>
+      </top>
+      <left>
+         <PasswordField fx:id="password" alignment="CENTER" prefHeight="31.0" prefWidth="168.0" promptText="enter password (optional)" BorderPane.alignment="CENTER" />
+      </left>
+      <bottom>
+         <ProgressBar fx:id="progress" nodeOrientation="LEFT_TO_RIGHT" prefHeight="44.0" prefWidth="603.0" progress="0.0" BorderPane.alignment="CENTER" />
+      </bottom>
+    </BorderPane>
+</StackPane>
